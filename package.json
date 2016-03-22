@@ -19,7 +19,7 @@
     "lint:eslint": "eslint --rule 'mocha/no-exclusive-tests:2' ./",
     "lint:eslint:fix": "eslint --fix --rule 'mocha/no-exclusive-tests:2' ./",
     "lint:jscs": "jscs ./",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "babel": "^6.5.1",
