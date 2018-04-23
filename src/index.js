@@ -5,6 +5,9 @@ const findWithRegex = (regex, contentBlock, callback) => {
   let start; // eslint-disable-line
   // Go through all matches in the text and return the indizes to the callback
   while ((matchArr = regex.exec(text)) !== null) { // eslint-disable-line
+    if (matchArr.index === regex.lastIndex) {
+      regex.lastIndex++;
+    }
     start = matchArr.index;
     callback(start, start + matchArr[0].length);
   }
