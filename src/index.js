@@ -1,4 +1,9 @@
-const findWithRegex = (regex, contentBlock, callback) => {
+// @flow
+import { type ContentBlock } from 'draft-js'
+
+type StrategyCallback = (start:number, end:number) => void
+
+const findWithRegex = (regex: RegExp, contentBlock: ContentBlock, callback: StrategyCallback) => {
   // Get the text from the contentBlock
   const text = contentBlock.getText();
   let matchArr;
