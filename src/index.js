@@ -3,7 +3,7 @@ import { type ContentBlock } from 'draft-js'
 
 type StrategyCallback = (start:number, end:number) => void
 
-const findWithRegex = (regex: RegExp, contentBlock: ContentBlock, callback: StrategyCallback) => {
+const findWithRegex = (regex: RegExp, contentBlock: ContentBlock, callback: StrategyCallback): void => {
   // Get the text from the contentBlock
   const text = contentBlock.getText();
   let matchArr;

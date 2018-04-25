@@ -1,6 +1,6 @@
 {
   "name": "find-with-regex",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "findWithRegex util",
   "author": {
     "name": "Nik Graf",
@@ -16,7 +16,7 @@
   "scripts": {
     "build": "npm run build:js && npm run build:flow",
     "build:js": "BABEL_ENV=production babel --out-dir='build' --ignore='__tests__/*' src",
-    "build:flow": "flow gen-flow-files src/index.js > build/index.js.flow",
+    "build:flow": "cp src/index.js build/index.js.flow",
     "lint": "npm run lint:eslint && npm run lint:jscs",
     "flow": "flow",
     "lint:eslint": "eslint ./",
@@ -31,6 +31,9 @@
     }
   },
   "precommit": "flow",
+  "peerDependencies": {
+    "draft-js": "^0.10.5"
+  },
   "devDependencies": {
     "babel": "^6.5.1",
     "babel-cli": "^6.26.0",
