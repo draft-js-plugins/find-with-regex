@@ -1,5 +1,5 @@
 // @flow
-import { type ContentBlock } from 'draft-js'
+import type { ContentBlock } from 'draft-js'
 
 type StrategyCallback = (start:number, end:number) => void
 
